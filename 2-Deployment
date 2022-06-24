@@ -1,0 +1,5 @@
+we can use the RollingUpdate deployment by including the strategy type under spec type: RollingUpdate in deployment yaml
+To update a container's image- kubectl set image deployment/my-deployment mycontainer=mynewimage:tag
+But make sure to set imagePullPolicy: "Always" 
+kubectl rollout restart deployment myapp
+
