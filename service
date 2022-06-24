@@ -1,0 +1,5 @@
+1- As mentioned the service is nodePort so firstly get the nodeport ip - kubectl get svc -o wide
+this ip ranges from 30000 to 32767. So our application will be listening on that port - nodeip:nodeport and not 8000 for the outside world.
+2- also make sure the pod is up and running - kubectl get pods -o wide
+Also kubectl describe pod if pod is not coming up 
+3- If pods are up, we can also check the logs of the containers to see for errors using - kubectl logs pods/pod-name -n <namespace> -c container-name
