@@ -1,0 +1,3 @@
+The DaemonSet is used to ensure that your pods are scheduled and running on every single available node while replicaset ensures that a specified number of pod replicas are running at any given time.
+One use case can be to run a daemon set for logs collection on each node, such as Fluentd since here replicaset can't ensure that logs are getting collected from each node as
+in case of rs desired no of nodes can be scheduled even on a single node.
